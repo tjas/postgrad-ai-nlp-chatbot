@@ -1,0 +1,148 @@
+version: "2.0"
+
+intents:
+- saudar
+- questionar
+- consultarcep
+- informarcep
+- despedir
+- nlu_fallback
+
+entities:
+- cep
+
+responses:
+  utter_saudar:
+    - text: "Olá. Como posso te ajudar?"
+    - text: "Como posso lhe ajudar?"
+    - text: "O que posso fazer por você?"
+
+  utter_questionar:
+    - text: "Eu sou um assistente virtual para consulta de endereços a partir de CEP. Me informe um CEP."
+
+  utter_consultarcep:
+    - text: "Forneça um CEP para que eu possa realizar a consulta."
+    - text: "É só informar um CEP para que eu possa realizar a consulta."
+
+  # utter_informarcep:
+  #   - text: "Estou realizando a consulta. Aguarde alguns segundos."
+
+  utter_ask_cep:
+    - text: "Forneça um CEP para que eu possa realizar a consulta."
+
+  utter_resultado_consultacep:
+    - condition:
+      - type: slot
+        name: found
+        value: true
+      text: "Informações de endereço: \nCEP: {resultado_consultacep_cep}\nLogradouro: {resultado_consultacep_logradouro}\nComplemento: {resultado_consultacep_complemento}\nBairro: {resultado_consultacep_bairro}\nCidade: {resultado_consultacep_localidade}\nEstado: {resultado_consultacep_uf}"
+    - condition:
+      - type: slot
+        name: found
+        value: false
+      text: "Não consegui realizar a consulta."
+
+  utter_falha_consultacep:
+    - text: "A rede pode estar passando por instabilidade, a API de consulta está indisponível ou você passou parâmetros fora do esperado. Tente novamente em instantes."
+
+  utter_falha_consultacep_notfound:
+    - text: "CEP não encontrado. Digite um CEP válido."
+
+  utter_manter_conversa:
+    - text: "Posso fazer algo mais por você?"
+    - text: "Ajudo em algo mais?"
+    - text: "Deseja fazer outra consulta?"
+
+  utter_despedir:
+    - text: "Se precisar estarei à disposição. Até mais."
+    - text: "Até mais, estou à disposição."
+    - text: "Tchau! Foi um prazer ajudar."
+
+  utter_fallback:
+  - text: "Desculpe, não entendi. Pergunte de outra forma ou digite um CEP válido para que eu possa lhe ajudar."
+  - text: "Eu sou um assistente virtual que consulta CEP. Digite um CEP válido para que eu possa lhe ajudar."
+
+slots:
+  cep:
+    type: text
+    influence_conversation: false
+  found:
+    type: bool
+    influence_conversation: false
+  resultado_consultacep_cep:
+    type: text
+    influence_conversation: false
+  resultado_consultacep_logradouro:
+    type: text
+    influence_conversation: false
+  resultado_consultacep_complemento:
+    type: text
+    influence_conversation: false
+  resultado_consultacep_bairro:
+    type: text
+    influence_conversation: false
+  resultado_consultacep_localidade:
+    type: text
+    influence_conversation: false
+  resultado_consultacep_uf:
+    type: text
+    influence_conversation: false
+
+
+forms:
+  consultacep_form:
+    required_slots:
+      cep:
+        - type: from_entity
+          entity: cep
+  # resultado_consultacep_form:
+  #   resultado_consultacep_cep:
+  #   - type: from_text
+  #   resultado_consultacep_logradouro:
+  #   - type: from_text
+  #   resultado_consultacep_complemento:
+  #   - type: from_text
+  #   resultado_consultacep_bairro:
+  #   - type: from_text
+  #   resultado_consultacep_localidade:
+  #   - type: from_text
+  #   resultado_consultacep_uf:
+  #   - type: from_text
+
+
+actions:
+  - action_clear_slots
+  - action_submit_consultacep
+
+# intents:
+#   - greet
+#   - goodbye
+#   - affirm
+#   - deny
+#   - mood_great
+#   - mood_unhappy
+#   - bot_challenge
+
+# responses:
+#   utter_greet:
+#   - text: "Hey! How are you?"
+
+#   utter_cheer_up:
+#   - text: "Here is something to cheer you up:"
+#     image: "https://i.imgur.com/nGF1K8f.jpg"
+
+#   utter_did_that_help:
+#   - text: "Did that help you?"
+
+#   utter_happy:
+#   - text: "Great, carry on!"
+
+#   utter_goodbye:
+#   - text: "Bye"
+
+#   utter_iamabot:
+#   - text: "I am a bot, powered by Rasa."
+
+# session_config:
+#   session_expiration_time: 60
+#   carry_over_slots_to_new_session: true

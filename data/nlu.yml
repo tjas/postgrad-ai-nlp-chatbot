@@ -1,0 +1,259 @@
+version: "2.0"
+
+# intents:
+# - saudar
+# - questionar
+# - consultarcep
+# - informarcep
+# - despedir
+# - nlu_fallback
+
+nlu:
+- intent: saudar
+  examples: |
+    - oi
+    - Oi
+    - olá
+    - como vai?
+    - bom dia
+    - bdia
+    - btarde
+    - bnoite
+    - boa trd
+    - b dia
+    - b noite
+    - boa tarde
+    - boa noite
+    - Tudo bem?
+    - tudo bem com vc?
+    - como vai
+    - td bem
+    - alô
+    - E aí?
+
+- intent: questionar
+  examples: |
+    - me diga o que vc faz
+    - se apresente
+    - Apresente-se
+    - o que pode fazer
+    - o que pode fzr por mim
+    - O que você é capaz de fazer
+    - o que voce faz
+    - q faz?
+    - oq vc faz
+    - qual seu objetivo
+    - quem é você
+    - Quem vc é
+    - como funciona?
+    - ?
+
+- intent: informarcep
+  examples: |
+    - [04625-900](cep)
+    - [12324-640](cep)
+    - [13232031](cep)
+    - [15700212](cep)
+    - [20020906](cep)
+    - [24935405](cep)
+    - [29043-090](cep)
+    - [29303-195](cep)
+    - [45602-210](cep)
+    - [53413340](cep)
+    - [55158-010](cep)
+    - [57032-061](cep)
+    - [57080566](cep)
+    - [57306650](cep)
+    - [58416378](cep)
+    - [59625-488](cep)
+    - [60360522](cep)
+    - [64009490](cep)
+    - [64075565](cep)
+    - [65068084](cep)
+    - [66087-730](cep)
+    - [68909-897](cep)
+    - [69316-402](cep)
+    - [69900-903](cep)
+    - [69905668](cep)
+    - [70330400](cep)
+    - [70382540](cep)
+    - [70655833](cep)
+    - [70747530](cep)
+    - [70750-630](cep)
+    - [70761-660](cep)
+    - [71060275](cep)
+    - [71730030](cep)
+    - [71993705](cep)
+    - [72230507](cep)
+    - [72307405](cep)
+    - [72318218](cep)
+    - [72415503](cep)
+    - [73376624](cep)
+    - [74684-480](cep)
+    - [74913-330](cep)
+    - [76812-396](cep)
+    - [76820232](cep)
+    - [78095525](cep)
+    - [79009-770](cep)
+    - [79063300](cep)
+    - [86042250](cep)
+    - [87206266](cep)
+    - [87507-290](cep)
+    - [88350-320](cep)
+    - [95034556](cep)
+    - [55555555](cep)
+    - consulte o cep [01001000](cep)
+    - pesquisar [70750630](cep)
+    - pesquise o cep [66087-730](cep)
+    - CEP: [11111-111](cep)
+    - CEP [00000-000](cep)
+    - [12345678](cep) esse
+
+- intent: consultarcep
+  examples: |
+    - busque o cep
+    - consultar cep
+    - consulte pra mim
+    - endereço do cep
+    - fazer pesquisa
+    - Pesquisar cep
+    - pesquise por favor
+    - encontre CEP
+    - quero consultar
+    - realizar consulta
+    - verifique o cep
+    - consulte um cep, por favor
+    - Quero fazer uma consulta
+    - quero consultar
+    - CEP
+    - sim
+    - s
+    - Sim
+
+- intent: despedir
+  examples: |
+    - Tchau
+    - adeus
+    - até logo
+    - Até mais
+    - falou
+    - ate
+    - até +
+    - somente isso
+    - nd obrigado
+    - grato
+    - agradecido
+    - Só isso
+    - Nada mais
+    - Falow
+    - flw
+    - obgd
+    - obrigado
+    - Brigadao
+    - tchau
+    - xau
+    - bjs
+    - valeu
+    - Valew!
+    - vlw
+    - blz
+    - beleza
+    - não
+    - n
+    - Nao
+
+
+# - intent: xxxxxxxxxxx
+#   examples: |
+#     - xxxxxxxxxxxxxxx
+
+# nlu:
+# - intent: greet
+#   examples: |
+#     - hey
+#     - hello
+#     - hi
+#     - hello there
+#     - good morning
+#     - good evening
+#     - moin
+#     - hey there
+#     - let's go
+#     - hey dude
+#     - goodmorning
+#     - goodevening
+#     - good afternoon
+
+# - intent: goodbye
+#   examples: |
+#     - good afternoon
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?

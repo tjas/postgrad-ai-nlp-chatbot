@@ -1,0 +1,88 @@
+version: "2.0"
+
+# intents:
+# - saudar
+# - questionar
+# - consultarcep
+# - informarcep
+# - despedir
+# - nlu_fallback
+
+rules:
+
+- rule: responde saudacao
+  steps:
+  - intent: saudar
+  - action: utter_saudar
+
+- rule: responde questionamento
+  steps:
+  - intent: questionar
+  - action: utter_questionar
+
+- rule: responde consulta de cep
+  steps:
+  - intent: consultarcep
+  - action: utter_consultarcep
+  #- action: utter_consultarcep
+  #- action: consultacep_form
+  #- active_loop: consultacep_form
+
+- rule: responde informe de cep
+  #condition:
+  #- active_loop: consultacep_form
+  # - slot_was_set:
+  #   - cep: true
+  steps:
+  - intent: informarcep
+  - action: consultacep_form
+  #- action: utter_informarcep
+  - action: action_submit_consultacep
+  - action: utter_resultado_consultacep
+  - action: utter_manter_conversa
+  #- active_loop: null
+  - action: action_clear_slots
+
+# - rule: responde informe de cep
+#   condition:
+#     - active_loop: consultacep_form
+#   steps:
+#     #- action: consultacep_form
+#     - action: utter_consultarcep
+#     - action: action_submit_consultacep
+#     - action: action_deactivate_loop
+#     - active_loop: null
+#     #- active_loop: resultado_consultacep_form
+#     - action: utter_resultado_consultacep
+#     - action: action_clear_slots
+
+# - rule: confirma consultacep
+#   condition:
+#     - active_loop: resultado_consultacep_form
+#   steps:
+#     - action: utter_resultado_consultacep
+#     #- action: resultado_consultacep_form
+#     - action: action_clear_slots
+#     - action: action_deactivate_loop
+#     - active_loop: null
+
+- rule: responde despedida
+  steps:
+  - intent: despedir
+  - action: utter_despedir
+
+- rule: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
+
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
