@@ -1,6 +1,6 @@
 # postgrad-ai-nlp-chatbot
 
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg?label=Status)](./README.md)
+[![Status](https://img.shields.io/badge/status-arquivado-brightgreen.svg?label=Status)](./README.md)
 [![Acessos](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftjas%2Fpostgrad-ai-nlp-chatbot&count_bg=%2379C83D&title_bg=%23555555&title=Acessos&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Licença](https://img.shields.io/github/license/tjas/postgrad-ai-nlp-chatbot?color=orange&label=Licença)](https://github.com/tjas/postgrad-ai-nlp-chatbot/blob/master/LICENCE)
 [![Commits](https://img.shields.io/github/commit-activity/t/tjas/postgrad-ai-nlp-chatbot?label=Commits)](https://github.com/tjas/postgrad-ai-nlp-chatbot/graphs/commit-activity)
@@ -11,18 +11,18 @@
 [![Watchers](https://img.shields.io/github/watchers/tjas/postgrad-ai-nlp-chatbot?color=blue&label=Watchers)](https://github.com/tjas/postgrad-ai-nlp-chatbot/watchers)
 [![Forks](https://img.shields.io/github/forks/tjas/postgrad-ai-nlp-chatbot?color=blue&label=Forks)](https://github.com/tjas/postgrad-ai-nlp-chatbot/forks)
 
-[![Python](https://img.shields.io/badge/python-v3.8.X-darkgreen?label=Python)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-v3.8-darkgreen?label=Python)](https://www.python.org/)
 [![Rasa](https://img.shields.io/badge/rasa-v2.8.14-blue?label=Rasa)](https://rasa.com/)
 
 > ⭐ Marque o projeto com uma estrela. 👀 Acompanhe o projeto para receber novidades.
 >
 > 🇺🇸 Access this page in [US English](./README.md).
 
-Exercício da disciplina *Computação Cognitiva: Chatbots* da pós-graduação em Inteligência Artificial utilizando Python e Rasa NLU Framework para construir um chatbot em Português do Brasil. O curso de pós-graduação foi realizado no [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/) e a referida disciplina ocorreu em 2020.
+Exercício da disciplina *Computação Cognitiva: Chatbots* da pós-graduação em Inteligência Artificial utilizando Python e [Rasa NLU Framework](https://rasa.com/) para construir um chatbot em Português do Brasil. O curso de pós-graduação foi realizado no [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/) e a referida disciplina ocorreu em 2020.
 
 ## Exercício Proposto
 
-Criar um chatbot utilizando o Rasa Framework, com as mesmas características do primeiro trabalho (realizado no Watson Assitant, para construir um chatbot semelhante ao construído neste projeto, mas não disponibilizado publicamente), atendendo aos seguintes requisitos:
+Criar um chatbot utilizando o [Rasa Framework](https://rasa.com/), com as mesmas características do primeiro trabalho (realizado no Watson Assitant, para construir um chatbot semelhante ao construído neste projeto, mas não disponibilizado publicamente), atendendo aos seguintes requisitos:
 
 * Estrutura básica: Saudação, Finalização, Ação, Outras perguntas (opcional);
 * Executar ao menos uma ação customizada dentro de um fluxo de formulário que conecte em um serviço externo (usando requests do Python);

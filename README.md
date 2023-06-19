@@ -1,6 +1,6 @@
 # postgrad-ai-nlp-chatbot
 
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg?label=Status)](./README.md)
+[![Status](https://img.shields.io/badge/status-archived-brightgreen.svg?label=Status)](./README.md)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftjas%2Fpostgrad-ai-nlp-chatbot&count_bg=%2379C83D&title_bg=%23555555&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Licence](https://img.shields.io/github/license/tjas/postgrad-ai-nlp-chatbot?color=orange&label=Licence)](https://github.com/tjas/postgrad-ai-nlp-chatbot/blob/master/LICENCE)
 [![Commits](https://img.shields.io/github/commit-activity/t/tjas/postgrad-ai-nlp-chatbot?label=Commits)](https://github.com/tjas/postgrad-ai-nlp-chatbot/graphs/commit-activity)
@@ -11,18 +11,18 @@
 [![Watchers](https://img.shields.io/github/watchers/tjas/postgrad-ai-nlp-chatbot?color=blue&label=Watchers)](https://github.com/tjas/postgrad-ai-nlp-chatbot/watchers)
 [![Forks](https://img.shields.io/github/forks/tjas/postgrad-ai-nlp-chatbot?color=blue&label=Forks)](https://github.com/tjas/postgrad-ai-nlp-chatbot/forks)
 
-[![Python](https://img.shields.io/badge/python-v3.8.X-darkgreen?label=Python)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-v3.8-darkgreen?label=Python)](https://www.python.org/)
 [![Rasa](https://img.shields.io/badge/rasa-v2.8.14-blue?label=Rasa)](https://rasa.com/)
 
 > ⭐ Mark the project with a star. 👀 Watch the project for receive news.
 >
 > 🇧🇷 Acesse esta página em [Português do Brasil](./README_pt-br.md).
 
-Artificial Intelligence postgraduation's *Cognitive Computing: Chatbots* discipline exercise using Python and Rasa NLU Framework to build a Brazilian Portuguese chatbot. The postgraduate course was held at [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/) and the referred discipline took place in 2020.
+Artificial Intelligence postgraduation's *Cognitive Computing: Chatbots* discipline exercise using Python and [Rasa NLU Framework](https://rasa.com/) to build a Brazilian Portuguese chatbot. The postgraduate course was held at [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/) and the referred discipline took place in 2020.
 
 ## Proposed Exercise
 
-Create a chatbot using the Rasa Framework, with the same characteristics as the first exercise (performed in Watson Assitant, to build a chatbot similar to the one built in this project, but not publicly available), meeting the following requirements:
+Create a chatbot using the [Rasa Framework](https://rasa.com/), with the same characteristics as the first exercise (performed in Watson Assitant, to build a chatbot similar to the one built in this project, but not publicly available), meeting the following requirements:
 
 * Basic structure: Greeting, Ending, Action, Other questions (optional);
 * Run at least one custom action within a form flow that connects to an external service (using Python requests);
